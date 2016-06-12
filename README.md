@@ -1,5 +1,5 @@
 # Granary Square Fountains
-A 3D version of John Conway’s Game of Life built for the Granary Square fountains. The top half of the gif controls the height of the fountain jet, representing the age of the cell. The bottom half of the gif controls the colour of the light, representing spread and growth from the initial state.
+A 3D version of John Conway’s Game of Life built for the Granary Square fountains. Pixels in the top half of the gif control the heights of the fountain jets, representing the age of each cell. Pixels in the bottom half of the gif control the colours of the lights, representing spread and growth from the initial state.
 
 Displayed during the Counting Backwards exhibition at Central Saint Martins in April 2016.
 
