@@ -22,13 +22,11 @@ class Cell {
 
   int countNeighbours() {
     int counter = 0;
-    for (int nX = x-1; nX <= x+1; nX++) {
-      for (int nY = y-1; nY <= y+1; nY++) {
-        if (nX >= 0 && nX < memoryWidth && nY >= 0 && nY < memoryHeight) {
-          if (nX != x || nY != y) {
-            if (cells[nX][nY].cache == alive) {
-              counter++;
-            }
+    for (int i = -1; i <= 1; i++) {
+      for (int j = -1; j <= 1; j++) {
+        if (x+i != x || y+j != y) {
+          if (cells[x+i][y+j].cache == alive) {
+            counter++;
           }
         }
       }

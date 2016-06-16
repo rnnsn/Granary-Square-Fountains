@@ -24,8 +24,8 @@ void setup() {
 
   initPreset("morse");
 
-  for (int x = 0; x < memoryWidth; x++) {
-    for (int y = 0; y < memoryHeight; y++) {
+  for (int x = 1; x < memoryWidth-1; x++) {
+    for (int y = 1; y < memoryHeight-1; y++) {
       Cell current = cells[x][y];
       current.displayAge();
       current.displayState();
@@ -36,14 +36,14 @@ void setup() {
 void draw() {
   //saveFrame("frame-#####.png");  
 
-  for (int x = 0; x < memoryWidth; x++) {
-    for (int y = 0; y < memoryHeight; y++) {
+  for (int x = 1; x < memoryWidth-1; x++) {
+    for (int y = 1; y < memoryHeight-1; y++) {
       Cell current = cells[x][y];
       current.setCache();
     }
   }
-  for (int x = 0; x < memoryWidth; x++) {
-    for (int y = 0; y < memoryHeight; y++) {
+  for (int x = 1; x < memoryWidth-1; x++) {
+    for (int y = 1; y < memoryHeight-1; y++) {
       Cell current = cells[x][y];
       int neighbours = current.countNeighbours();
       if (neighbours < 2 || neighbours > 3) {
